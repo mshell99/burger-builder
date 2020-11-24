@@ -106,6 +106,8 @@ class ContactData extends Component {
         formElementIdentifier
       ].value;
     }
+
+    
     const order = {
       ingredients: this.props.ings,
       price: this.props.price,
@@ -128,9 +130,12 @@ class ContactData extends Component {
       }
     );
 
-    const updatedOrderForm = updateObject(this.state.orderForm[inputIdentifier], {
-      [inputIdentifier]: updatedFormElement,
-    });
+    
+    const updatedOrderForm = updateObject(this.state.orderForm, {
+      [inputIdentifier]: updatedFormElement
+  });
+
+
 
     let formIsValid = true;
 
